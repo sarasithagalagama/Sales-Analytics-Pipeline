@@ -114,6 +114,59 @@ sales-analytics-pipeline/
 
 ![Discount vs Profit](screenshots/06_discount_negative_profit.png)
 
+### dbt Documentation Home
+
+![dbt Docs Home](screenshots/07_dbt_docs_home.png)
+
+### dbt Lineage Graph
+
+![dbt Lineage Graph](screenshots/08_dbt_lineage_graph.png)
+
+### dbt Staging Model
+
+![dbt Staging Model](screenshots/09_dbt_staging_model.png)
+
+### dbt Monthly Revenue Model
+
+![dbt Monthly Revenue Model](screenshots/10_dbt_monthly_revenue_model.png)
+
+## dbt Core Implementation
+
+dbt Core was added to organize SQL transformations into reusable models.
+
+### dbt Model Layers
+
+- `stg_superstore_sales` - staging model created from the raw PostgreSQL table
+- `monthly_revenue` - monthly sales and profit summary
+- `top_products` - product-level sales and profit analysis
+- `customer_segments` - segment-level performance analysis
+- `regional_performance` - regional sales and profit performance
+- `discount_profit_analysis` - discount impact on sales and profit
+- `category_performance` - category and sub-category performance analysis
+
+### dbt Commands Used
+
+```bash
+dbt debug
+dbt run
+dbt test
+dbt docs generate
+dbt docs serve
+```
+
+### dbt Tests
+
+Data quality tests were added for important fields such as:
+
+- `row_id`
+- `order_id`
+- `order_date`
+- `customer_id`
+- `product_id`
+- `sales`
+- `quantity`
+- `profit`
+
 ## Database Table
 
 The dataset was imported into a PostgreSQL table called:

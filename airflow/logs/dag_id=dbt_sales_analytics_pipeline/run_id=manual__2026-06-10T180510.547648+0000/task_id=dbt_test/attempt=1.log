@@ -1,0 +1,53 @@
+[2026-06-10T18:05:27.502+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-06-10T18:05:27.513+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_sales_analytics_pipeline.dbt_test manual__2026-06-10T18:05:10.547648+00:00 [queued]>
+[2026-06-10T18:05:27.520+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_sales_analytics_pipeline.dbt_test manual__2026-06-10T18:05:10.547648+00:00 [queued]>
+[2026-06-10T18:05:27.522+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2026-06-10T18:05:27.546+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): dbt_test> on 2026-06-10 18:05:10.547648+00:00
+[2026-06-10T18:05:27.555+0000] {standard_task_runner.py:72} INFO - Started process 258 to run task
+[2026-06-10T18:05:27.559+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dbt_sales_analytics_pipeline', 'dbt_test', 'manual__2026-06-10T18:05:10.547648+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dbt_sales_pipeline_dag.py', '--cfg-path', '/tmp/tmpcoyb7nes']
+[2026-06-10T18:05:27.563+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask dbt_test
+[2026-06-10T18:05:27.608+0000] {task_command.py:467} INFO - Running <TaskInstance: dbt_sales_analytics_pipeline.dbt_test manual__2026-06-10T18:05:10.547648+00:00 [running]> on host 88c0debc75ff
+[2026-06-10T18:05:27.688+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sarasitha' AIRFLOW_CTX_DAG_ID='dbt_sales_analytics_pipeline' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2026-06-10T18:05:10.547648+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-10T18:05:10.547648+00:00'
+[2026-06-10T18:05:27.690+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-06-10T18:05:27.708+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-06-10T18:05:27.710+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/sales_analytics_dbt && dbt test']
+[2026-06-10T18:05:27.742+0000] {subprocess.py:99} INFO - Output:
+[2026-06-10T18:05:30.289+0000] {subprocess.py:106} INFO - [0m18:05:30  Running with dbt=1.11.11
+[2026-06-10T18:05:30.572+0000] {subprocess.py:106} INFO - [0m18:05:30  Registered adapter: postgres=1.9.0
+[2026-06-10T18:05:30.947+0000] {subprocess.py:106} INFO - [0m18:05:30  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-06-10T18:05:30.949+0000] {subprocess.py:106} INFO - There are 1 unused configuration paths:
+[2026-06-10T18:05:30.950+0000] {subprocess.py:106} INFO - - models.sales_analytics_dbt.example
+[2026-06-10T18:05:31.167+0000] {subprocess.py:106} INFO - [0m18:05:31  Found 7 models, 9 data tests, 474 macros
+[2026-06-10T18:05:31.170+0000] {subprocess.py:106} INFO - [0m18:05:31
+[2026-06-10T18:05:31.175+0000] {subprocess.py:106} INFO - [0m18:05:31  Concurrency: 1 threads (target='dev')
+[2026-06-10T18:05:31.178+0000] {subprocess.py:106} INFO - [0m18:05:31
+[2026-06-10T18:05:31.391+0000] {subprocess.py:106} INFO - [0m18:05:31  1 of 9 START test not_null_stg_superstore_sales_customer_id .................... [RUN]
+[2026-06-10T18:05:31.526+0000] {subprocess.py:106} INFO - [0m18:05:31  1 of 9 PASS not_null_stg_superstore_sales_customer_id .......................... [[32mPASS[0m in 0.13s]
+[2026-06-10T18:05:31.543+0000] {subprocess.py:106} INFO - [0m18:05:31  2 of 9 START test not_null_stg_superstore_sales_order_date ..................... [RUN]
+[2026-06-10T18:05:31.656+0000] {subprocess.py:106} INFO - [0m18:05:31  2 of 9 PASS not_null_stg_superstore_sales_order_date ........................... [[32mPASS[0m in 0.11s]
+[2026-06-10T18:05:31.660+0000] {subprocess.py:106} INFO - [0m18:05:31  3 of 9 START test not_null_stg_superstore_sales_order_id ....................... [RUN]
+[2026-06-10T18:05:31.758+0000] {subprocess.py:106} INFO - [0m18:05:31  3 of 9 PASS not_null_stg_superstore_sales_order_id ............................. [[32mPASS[0m in 0.10s]
+[2026-06-10T18:05:31.763+0000] {subprocess.py:106} INFO - [0m18:05:31  4 of 9 START test not_null_stg_superstore_sales_product_id ..................... [RUN]
+[2026-06-10T18:05:31.862+0000] {subprocess.py:106} INFO - [0m18:05:31  4 of 9 PASS not_null_stg_superstore_sales_product_id ........................... [[32mPASS[0m in 0.10s]
+[2026-06-10T18:05:31.866+0000] {subprocess.py:106} INFO - [0m18:05:31  5 of 9 START test not_null_stg_superstore_sales_profit ......................... [RUN]
+[2026-06-10T18:05:32.058+0000] {subprocess.py:106} INFO - [0m18:05:32  5 of 9 PASS not_null_stg_superstore_sales_profit ............................... [[32mPASS[0m in 0.19s]
+[2026-06-10T18:05:32.062+0000] {subprocess.py:106} INFO - [0m18:05:32  6 of 9 START test not_null_stg_superstore_sales_quantity ....................... [RUN]
+[2026-06-10T18:05:32.132+0000] {subprocess.py:106} INFO - [0m18:05:32  6 of 9 PASS not_null_stg_superstore_sales_quantity ............................. [[32mPASS[0m in 0.07s]
+[2026-06-10T18:05:32.135+0000] {subprocess.py:106} INFO - [0m18:05:32  7 of 9 START test not_null_stg_superstore_sales_row_id ......................... [RUN]
+[2026-06-10T18:05:32.209+0000] {subprocess.py:106} INFO - [0m18:05:32  7 of 9 PASS not_null_stg_superstore_sales_row_id ............................... [[32mPASS[0m in 0.07s]
+[2026-06-10T18:05:32.214+0000] {subprocess.py:106} INFO - [0m18:05:32  8 of 9 START test not_null_stg_superstore_sales_sales .......................... [RUN]
+[2026-06-10T18:05:32.308+0000] {subprocess.py:106} INFO - [0m18:05:32  8 of 9 PASS not_null_stg_superstore_sales_sales ................................ [[32mPASS[0m in 0.09s]
+[2026-06-10T18:05:32.312+0000] {subprocess.py:106} INFO - [0m18:05:32  9 of 9 START test unique_stg_superstore_sales_row_id ........................... [RUN]
+[2026-06-10T18:05:32.418+0000] {subprocess.py:106} INFO - [0m18:05:32  9 of 9 PASS unique_stg_superstore_sales_row_id ................................. [[32mPASS[0m in 0.11s]
+[2026-06-10T18:05:32.591+0000] {subprocess.py:106} INFO - [0m18:05:32
+[2026-06-10T18:05:32.592+0000] {subprocess.py:106} INFO - [0m18:05:32  Finished running 9 data tests in 0 hours 0 minutes and 1.41 seconds (1.41s).
+[2026-06-10T18:05:32.744+0000] {subprocess.py:106} INFO - [0m18:05:32
+[2026-06-10T18:05:32.745+0000] {subprocess.py:106} INFO - [0m18:05:32  [32mCompleted successfully[0m
+[2026-06-10T18:05:32.746+0000] {subprocess.py:106} INFO - [0m18:05:32
+[2026-06-10T18:05:32.747+0000] {subprocess.py:106} INFO - [0m18:05:32  Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=9
+[2026-06-10T18:05:34.222+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-06-10T18:05:34.251+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-06-10T18:05:34.253+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dbt_sales_analytics_pipeline, task_id=dbt_test, run_id=manual__2026-06-10T18:05:10.547648+00:00, execution_date=20260610T180510, start_date=20260610T180527, end_date=20260610T180534
+[2026-06-10T18:05:34.278+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-06-10T18:05:34.285+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-10T18:05:34.286+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

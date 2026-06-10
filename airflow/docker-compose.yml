@@ -1,0 +1,22 @@
+services:
+  airflow:
+    image: apache/airflow:2.10.3
+    container_name: sales_airflow
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__WEBSERVER__SECRET_KEY: sales_analytics_secret
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./.dbt:/home/airflow/.dbt
+      - ../sales_analytics_dbt:/opt/airflow/sales_analytics_dbt
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "pip install --no-cache-dir dbt-postgres==1.9.0 &&
+      airflow db init &&
+      airflow users create --username admin --password admin --firstname Sarasitha --lastname Galagama --role Admin --email admin@example.com || true;
+      airflow scheduler & airflow webserver"

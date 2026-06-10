@@ -1,0 +1,59 @@
+==================== 2026-06-10T16:59:49.300160Z | 019eb279-d4b1-7be1-ad62-35e295a02b3d ====================
+16:59:49.300350 [info ]: Installing dbt project and profile setup
+16:59:49.311612 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+16:59:49.311898 [info ]: Success Project created successfully!
+16:59:49.312050 [info ]: Info Project name: jaffle_shop
+16:59:49.312203 [info ]: Info Project directory: jaffle_shop
+16:59:49.312351 [info ]: Info Setting up your profile...
+16:59:49.312588 [info ]: Info Creating new profile...
+17:00:17.767309 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+==================== 2026-06-10T17:01:27.031735Z | 019eb27b-5276-7fa2-b654-4324a556de3e ====================
+17:01:27.031865 [info ]: Installing dbt project and profile setup
+17:01:27.034840 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+17:01:27.044463 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+17:01:27.044707 [info ]: Success Project created successfully!
+17:01:27.044832 [info ]: Info Project name: jaffle_shop_1
+17:01:27.044949 [info ]: Info Project directory: jaffle_shop_1
+17:01:27.045069 [info ]: Info Setting up your profile...
+17:01:27.045275 [info ]: Info Creating new profile...
+17:01:29.500771 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+17:03:08.586661 [info ]: Success Profile written to C:\Users\ASUS\.dbt\profiles.yml
+17:03:08.587179 [info ]: Validating profile inputs, adapters, and connection
+
+17:03:08.587448 [info ]: dbt-core 2.0.0-alpha.1
+17:03:08.588113 [info ]: Started loading project
+17:03:08.590330 [info ]: Loading ~/.dbt/profiles.yml
+17:03:08.591195 [info ]: Finished loading project [  0.00s]
+17:03:08.591524 [error]: [InvalidConfig (dbt1005)]: The 'postgres' adapter is not yet supported by dbt Fusion. Supported adapters: snowflake, bigquery, databricks, redshift
+17:03:08.821589 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [1m 42s]
+[0m22:35:55.910756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184ABA3A3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184A82A7390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184ADC07D90>]}
+
+
+============================== 22:35:55.914700 | 2463847a-461e-4a7e-acbd-b327d685f117 ==============================
+[0m22:35:55.914700 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:35:55.915168 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ASUS\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init sales_analytics_dbt', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:35:55.927808 [debug] [MainThread]: Starter project path: C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\include\starter_project
+[0m22:35:55.934874 [info ] [MainThread]: 
+Your new dbt project "sales_analytics_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:35:55.935234 [info ] [MainThread]: Setting up your profile.
+[0m22:37:44.614276 [info ] [MainThread]: Profile sales_analytics_dbt written to C:\Users\ASUS\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:37:44.615421 [debug] [MainThread]: Command `dbt init` succeeded at 22:37:44.615317 after 108.81 seconds
+[0m22:37:44.615685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184ADD21CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184ADDE1010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184ACAAF9B0>]}
+[0m22:37:44.615963 [debug] [MainThread]: Flushing usage events
+[0m22:37:46.096441 [debug] [MainThread]: An error was encountered while trying to flush usage events

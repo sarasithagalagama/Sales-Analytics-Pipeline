@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: monthly_revenue
+    description: "Monthly sales and profit summary created from the Superstore dataset."
+
+  - name: top_products
+    description: "Product-level sales, quantity, and profit performance."
+
+  - name: customer_segments
+    description: "Sales and profit performance by customer segment."
+
+  - name: regional_performance
+    description: "Sales, profit, quantity, and order count by region."
+
+  - name: discount_profit_analysis
+    description: "Analysis of discount levels and their impact on sales and profit."
+
+  - name: category_performance
+    description: "Sales, profit, quantity, and average discount by category and sub-category."

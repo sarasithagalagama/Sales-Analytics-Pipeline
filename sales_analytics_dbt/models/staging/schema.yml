@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_superstore_sales
+    description: "Staging model for the Superstore sales dataset loaded from PostgreSQL."
+    columns:
+      - name: row_id
+        description: "Unique row identifier for each record."
+        tests:
+          - not_null
+          - unique
+
+      - name: order_id
+        description: "Unique order identifier."
+        tests:
+          - not_null
+
+      - name: order_date
+        description: "Date when the order was placed."
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: "Unique customer identifier."
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "Unique product identifier."
+        tests:
+          - not_null
+
+      - name: sales
+        description: "Sales amount for the order line."
+        tests:
+          - not_null
+
+      - name: quantity
+        description: "Quantity of products ordered."
+        tests:
+          - not_null
+
+      - name: profit
+        description: "Profit or loss for the order line."
+        tests:
+          - not_null

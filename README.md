@@ -167,6 +167,39 @@ Data quality tests were added for important fields such as:
 - `quantity`
 - `profit`
 
+## Airflow Orchestration
+
+Apache Airflow was added to schedule and orchestrate the dbt workflow.
+
+The DAG runs the pipeline in two steps:
+
+```text
+dbt_run → dbt_test
+```
+
+### Tasks
+
+- `dbt_run` runs all dbt models and creates/updates analytics views.
+- `dbt_test` runs dbt data quality tests after the models are built.
+
+### Schedule
+
+The DAG is scheduled to run daily using:
+
+```
+schedule="@daily"
+```
+
+### Airflow Screenshots
+
+#### Airflow DAG Success
+
+![Airflow DAG Success](screenshots/11_airflow_dag_success.png)
+
+#### Airflow DAG List
+
+![Airflow DAG List](screenshots/12_airflow_dag_list.png)
+
 ## Database Table
 
 The dataset was imported into a PostgreSQL table called:

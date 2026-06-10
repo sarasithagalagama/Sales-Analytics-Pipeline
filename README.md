@@ -88,6 +88,32 @@ sales-analytics-pipeline/
 |-- README.md
 ```
 
+## Screenshots
+
+### Table Preview
+
+![Table Preview](screenshots/01_table_preview.png)
+
+### Revenue by Month
+
+![Revenue by Month](screenshots/02_revenue_by_month.png)
+
+### Top Products
+
+![Top Products](screenshots/03_top_products.png)
+
+### Customer Segment Performance
+
+![Customer Segments](screenshots/04_customer_segments.png)
+
+### Regional Sales Performance
+
+![Regional Performance](screenshots/05_regional_performance.png)
+
+### High Discount Orders with Negative Profit
+
+![Discount vs Profit](screenshots/06_discount_negative_profit.png)
+
 ## Database Table
 
 The dataset was imported into a PostgreSQL table called:
